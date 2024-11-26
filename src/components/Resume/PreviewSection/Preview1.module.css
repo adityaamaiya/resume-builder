@@ -1,0 +1,55 @@
+/* Main container */
+.personalInfo,
+.education,
+.workExperience,
+.skills,
+.projects {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Section headers */
+.personalInfo h3,
+.education h3,
+.workExperience h3,
+.skills h3,
+.projects h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Text inside each section */
+.personalInfo p,
+.education p,
+.workExperience p,
+.skills p,
+.projects p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Button Style */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

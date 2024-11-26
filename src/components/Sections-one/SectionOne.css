@@ -1,0 +1,39 @@
+.section-one {
+  padding: 64px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-one-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.section-one-left img {
+  max-width: 545px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-one-right {
+  margin-top: 4rem;
+}
+
+.section-one .btn {
+  margin-top: 2rem;
+}
+.section-one-right {
+  max-width: 545px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-one-right .btn {
+  margin-top: 3rem;
+}
+.text {
+  color: var(--clr-dark);
+  opacity: 0.9;
+  margin: 2rem 0;
+  line-height: 1.6;
+  text-align: end;
+}

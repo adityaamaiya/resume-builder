@@ -1,0 +1,9 @@
+.footer{
+    padding: 1rem 0;
+}
+.footer-content p{
+    color: var(--clr-grey);
+}
+.footer-content p span{
+    color: var(--clr-white);
+}

@@ -1,0 +1,24 @@
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
+  flex-direction: row;
+  justify-content:space-around;
+  padding: 20px;
+  align-items: center;
+}
+.navbar-container {
+ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.navbar-logo {
+  width: 25px;
+  margin-right: 6px;
+  opacity: 0.8;
+  cursor: pointer;
+}

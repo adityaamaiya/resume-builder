@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# **Resume Builder Application**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Project Overview**
 
-## Available Scripts
+This is a dynamic **Resume Builder Application** built with React. It allows users to input their details, preview the resume in real-time, switch between themes, and export it as a PDF. Users can choose from multiple layouts to customize the appearance of their resume.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## **Features**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **1. User Inputs**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Personal Info**:
+  - Name, Email, Phone, LinkedIn, GitHub.
+- **Education**:
+  - Institution, Degree, Year of Passing.
+- **Work Experience**:
+  - Company, Role, Duration, Achievements.
+- **Skills**:
+  - Multi-select dropdown to add skills.
+- **Projects**:
+  - Title, Description, Technologies Used.
 
-### `npm test`
+### **2. State Management**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Uses **React Context** for managing and updating user data globally.
 
-### `npm run build`
+### **3. Dynamic Resume Preview**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Real-time updates of the resume as the form is filled.
+- Two layout options for customization.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **4. Theme Switching**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Light Mode and Dark Mode support.
+- The user's theme preference is **persisted in localStorage**.
 
-### `npm run eject`
+### **5. Save as PDF**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Export the resume as a PDF using **`react-to-pdf`**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## **Technologies Used**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**: Framework for building the application.
+- **React Context**: For global state management.
+- **CSS Modules**: For styling.
+- **react-to-pdf**: For PDF export functionality.
+- **localStorage**: To persist theme preference.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Getting Started**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **1. Clone the Repository**
 
-### Code Splitting
+```bash
+git clone <repository_url>
+cd resume-builder
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **2. Install Dependencies**
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **3. Run the Application**
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application will run at http://localhost:3000
 
-### Advanced Configuration
+## **Usage**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Fill Out the Form**:  
+   - Enter your details in the following sections:
+     - **Personal Info**: Name, Email, Phone, LinkedIn, GitHub.  
+     - **Education**: Institution, Degree, Year of Passing.  
+     - **Work Experience**: Company, Role, Duration, Achievements.  
+     - **Skills**: Add skills using a multi-select dropdown.  
+     - **Projects**: Provide Title, Description, and Technologies Used.  
 
-### Deployment
+2. **Real-Time Preview**:  
+   - View your resume dynamically updated in the preview panel as you fill out the form.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Choose Layout**:  
+   - Toggle between two layout options to customize your resume.
 
-### `npm run build` fails to minify
+4. **Theme Switching**:  
+   - Switch between Light and Dark Modes.  
+   - Your theme preference is saved using **localStorage**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. **Save as PDF**:  
+   - Click the **Download PDF** button to export your resume.
+
+## **Project Demo**
+
+[**Link to the deployed application**](<Deployment_URL>)
+
+---
+
+## **Future Enhancements**
+
+- Add drag-and-drop functionality for section reordering.
+- Enable custom layout designs.
+- Save resumes online with user authentication.
+
+---
+
+## **License**
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+**Enjoy creating your resume! 🎉**
