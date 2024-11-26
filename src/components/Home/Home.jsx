@@ -8,18 +8,15 @@ import Footer from "../Footer/Footer";
 import { DarkModeProvider } from "../../Context/DarkModeContext";
 
 export default function Home() {
-    
   return (
     <div>
-       <DarkModeProvider>
+      <DarkModeProvider>
         <Navbar />
-        </DarkModeProvider>
-        <Header />
-        <SectionOne />
-        <SectionTwo />
-        <Footer />
-       
-       
+      </DarkModeProvider>
+      <Header />
+      <SectionOne />
+      <SectionTwo />
+      <Footer />
     </div>
- )
+  );
 }

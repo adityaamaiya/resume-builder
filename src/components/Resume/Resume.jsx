@@ -6,7 +6,7 @@ import { ResumeProvider } from "../../Context/ResumeContext";
 import EducationSection from "./EducationSection/EducationSection";
 import ProjectsSection from "./ProjectsSection/ProjectsSection";
 import SkillsSection from "./SkillsSection/SkillsSection";
-import { DarkModeProvider,  } from "../../Context/DarkModeContext";
+import { DarkModeProvider } from "../../Context/DarkModeContext";
 import ExperienceSection from "./ExperienceSection/ExperienceSection";
 import Preview1 from "./PreviewSection/Preview1";
 import Preview2 from "./PreviewSection/Preview2";

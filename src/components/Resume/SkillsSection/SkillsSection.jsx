@@ -9,7 +9,7 @@ const SkillsSection = () => {
   const handleSkillChange = (e) => {
     const { value, checked } = e.target;
 
-    // If checked, add the skill to the array, otherwise remove it
+    // If checked, add the skill to the array, otherwise removing it
     if (checked) {
       setSkills([...skills, value]);
     } else {
@@ -18,40 +18,44 @@ const SkillsSection = () => {
   };
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen); // Toggle the dropdown open/close
+    setIsOpen(!isOpen); // to Toggle the dropdown open/close
   };
 
-  // Close the dropdown if the user clicks outside of it
+  // Closing the dropdown if the user clicks outside of it
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setIsOpen(false); // Close dropdown if click is outside
+        setIsOpen(false); // Closes dropdown if click is outside
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside); // Listen for click outside
+    document.addEventListener("mousedown", handleClickOutside); // Listens for clicks outside
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside); // Cleanup listener
+      document.removeEventListener("mousedown", handleClickOutside); // Cleaning up the listener
     };
   }, []);
 
   return (
-    <section  style={{marginTop:"20px",marginBottom:"20px"}}>
+    <section style={{ marginTop: "20px", marginBottom: "20px" }}>
       <h2>Skills</h2>
-      <p className="form-label" style={{marginTop:"20px"}}>Select Skills: </p>
-      <div className="section" style={{position:"relative",padding:0}}  ref={dropdownRef}>
-        
+      <p className="form-label" style={{ marginTop: "20px" }}>
+        Select Skills:{" "}
+      </p>
+      <div
+        className="section"
+        style={{ position: "relative", padding: 0 }}
+        ref={dropdownRef}
+      >
         <button
           type="button"
           className="form-control"
           onClick={toggleDropdown}
           style={{
-           
             width: "200px",
             backgroundColor: "#f0f0f0",
             border: "1px solid #ccc",
             textAlign: "left",
-            color:"black"
+            color: "black",
           }}
         >
           {skills.length > 0
@@ -72,7 +76,6 @@ const SkillsSection = () => {
               zIndex: 1,
               maxHeight: "200px",
               overflowY: "auto",
-              
             }}
           >
             {[
@@ -95,7 +98,6 @@ const SkillsSection = () => {
                   checked={skills.includes(skill)}
                   onChange={handleSkillChange}
                   style={{ marginRight: "8px" }}
-                  
                 />
                 <label htmlFor={skill}>{skill}</label>
               </div>

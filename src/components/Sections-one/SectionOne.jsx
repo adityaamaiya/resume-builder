@@ -11,7 +11,9 @@ export default function SectionOne() {
           <img src={sectionOneImg} alt="sectionOneImg" />
         </div>
         <div class="section-one-right text-center">
-          <h2 class="lg-title text">Use the best resume maker as your guide!</h2>
+          <h2 class="lg-title text">
+            Use the best resume maker as your guide!
+          </h2>
           <p class="text">
             Getting that dream job can seem like an impossible task. We're here
             to change that. Give yourself a real advantage with the best online

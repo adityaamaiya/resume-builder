@@ -3,12 +3,12 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const DarkModeContext = createContext();
 
 export const DarkModeProvider = ({ children }) => {
-  // Initialize state with local storage value or default to false
+  // Initialize state with local storage value or default value to false
   const [isDarkMode, setIsDarkMode] = useState(
     () => JSON.parse(localStorage.getItem("isDarkMode")) || false
   );
 
-  // Persist state to local storage when it changes
+  // Persisting state to local storage when it changes
   useEffect(() => {
     localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);

@@ -1,9 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 
-// Create Context
+// Creating a custom hook to access the context
 const ResumeContext = createContext();
 
-// Provider Component
 export const ResumeProvider = ({ children }) => {
   const [personalInfo, setPersonalInfo] = useState({
     name: "",
@@ -49,5 +48,5 @@ export const ResumeProvider = ({ children }) => {
   );
 };
 
-// Hook for consuming context
+// Custom Hook for consuming context
 export const useResume = () => useContext(ResumeContext);

@@ -12,10 +12,7 @@ export default function SectionTwo() {
           <div class="section-items">
             <div class="section-item">
               <div class="section-item-icon">
-                <img
-                  src={feature1}
-                  alt=""
-                />
+                <img src={feature1} alt="" />
               </div>
               <h5 class="section-item-title">
                 Make a resume that wins interviews!
@@ -29,10 +26,7 @@ export default function SectionTwo() {
 
             <div class="section-item">
               <div class="section-item-icon">
-                <img
-                  src={feature2}
-                  alt=""
-                />
+                <img src={feature2} alt="" />
               </div>
               <h5 class="section-item-title">Resume writing made easy!</h5>
               <p class="text">
@@ -44,10 +38,7 @@ export default function SectionTwo() {
 
             <div class="section-item">
               <div class="section-item-icon">
-                <img
-                  src={feature3}
-                  alt=""
-                />
+                <img src={feature3} alt="" />
               </div>
               <h5 class="section-item-title">
                 A recruiter-tested CV maker tool

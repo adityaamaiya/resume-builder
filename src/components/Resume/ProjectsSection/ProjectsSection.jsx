@@ -52,7 +52,7 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="form-elem">
-            <label htmlFor="description :" className="form-label">
+              <label htmlFor="description :" className="form-label">
                 Description
               </label>
               <textarea
@@ -74,7 +74,9 @@ const ProjectsSection = () => {
                 value={project.technologies.join(", ")}
                 placeholder="Technologies Used (comma-separated)"
                 className="form-control"
-                onChange={(e) => handleTechnologiesChange(index, e.target.value)}
+                onChange={(e) =>
+                  handleTechnologiesChange(index, e.target.value)
+                }
               />
             </div>
           </section>
@@ -88,7 +90,12 @@ const ProjectsSection = () => {
         </>
       ))}
 
-      <button type="button" onClick={addProject} className="btn btn-primary" style={{ marginLeft: "10px" }}>
+      <button
+        type="button"
+        onClick={addProject}
+        className="btn btn-primary"
+        style={{ marginLeft: "10px" }}
+      >
         Add Project
       </button>
     </>

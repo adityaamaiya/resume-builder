@@ -15,25 +15,23 @@ const Preview1 = () => {
       {/* Personal Info */}
       <section className={styles.personalInfo}>
         <h3>Personal Info</h3>
-      
-          <p>
-            <strong>Name:</strong> {personalInfo.name}
-          </p>
-          <p>
-            <strong>Email:</strong> {personalInfo.email}
-          </p>
-          <p>
-            <strong>Phone:</strong> {personalInfo.phone}
-          </p>
-        
-        
-          <p>
-            <strong>LinkedIn:</strong> {personalInfo.linkedIn}
-          </p>
-          <p>
-            <strong>GitHub:</strong> {personalInfo.github}
-          </p>
-        
+
+        <p>
+          <strong>Name:</strong> {personalInfo.name}
+        </p>
+        <p>
+          <strong>Email:</strong> {personalInfo.email}
+        </p>
+        <p>
+          <strong>Phone:</strong> {personalInfo.phone}
+        </p>
+
+        <p>
+          <strong>LinkedIn:</strong> {personalInfo.linkedIn}
+        </p>
+        <p>
+          <strong>GitHub:</strong> {personalInfo.github}
+        </p>
       </section>
 
       {/* Education */}

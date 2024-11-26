@@ -29,8 +29,8 @@
   margin: 0.9rem 0;
 }
 .text {
-    color: var(--clr-dark);
-    opacity: 0.9;
-    margin: 2rem 0;
-    line-height: 1.6;
-  }
+  color: var(--clr-dark);
+  opacity: 0.9;
+  margin: 2rem 0;
+  line-height: 1.6;
+}

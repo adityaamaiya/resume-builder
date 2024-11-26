@@ -76,30 +76,34 @@ The application will run at http://localhost:3000
 
 ## **Usage**
 
-1. **Fill Out the Form**:  
-   - Enter your details in the following sections:
-     - **Personal Info**: Name, Email, Phone, LinkedIn, GitHub.  
-     - **Education**: Institution, Degree, Year of Passing.  
-     - **Work Experience**: Company, Role, Duration, Achievements.  
-     - **Skills**: Add skills using a multi-select dropdown.  
-     - **Projects**: Provide Title, Description, and Technologies Used.  
+1. **Fill Out the Form**:
 
-2. **Real-Time Preview**:  
+   - Enter your details in the following sections:
+     - **Personal Info**: Name, Email, Phone, LinkedIn, GitHub.
+     - **Education**: Institution, Degree, Year of Passing.
+     - **Work Experience**: Company, Role, Duration, Achievements.
+     - **Skills**: Add skills using a multi-select dropdown.
+     - **Projects**: Provide Title, Description, and Technologies Used.
+
+2. **Real-Time Preview**:
+
    - View your resume dynamically updated in the preview panel as you fill out the form.
 
-3. **Choose Layout**:  
+3. **Choose Layout**:
+
    - Toggle between two layout options to customize your resume.
 
-4. **Theme Switching**:  
-   - Switch between Light and Dark Modes.  
+4. **Theme Switching**:
+
+   - Switch between Light and Dark Modes.
    - Your theme preference is saved using **localStorage**.
 
-5. **Save as PDF**:  
+5. **Save as PDF**:
    - Click the **Download PDF** button to export your resume.
 
 ## **Project Demo**
 
-[**Link to the deployed application**](<Deployment_URL>)
+[**Link to the deployed application**](https://resume-builder-vert-seven.vercel.app/)
 
 ---
 

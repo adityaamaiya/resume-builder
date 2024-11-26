@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useResume } from "../../../Context/ResumeContext";
 
-
 const ExperienceSection = () => {
   const { workExperience, setWorkExperience } = useResume();
   const [company, setCompany] = useState("");
@@ -19,7 +18,7 @@ const ExperienceSection = () => {
       };
       setWorkExperience([...workExperience, newExperience]);
 
-      // Clear input fields after adding
+      // Clearing the input fields after adding the data
       setCompany("");
       setRole("");
       setDuration("");
@@ -75,9 +74,10 @@ const ExperienceSection = () => {
             className="form-control"
           />
         </div>
-        
       </div>
-      <button className="btn btn-primary " onClick={handleAddWorkExperience}>Add Work Experience</button>
+      <button className="btn btn-primary " onClick={handleAddWorkExperience}>
+        Add Work Experience
+      </button>
 
       <div style={{ marginTop: "20px" }}>
         <h3>Work Experience Entries</h3>
@@ -87,11 +87,22 @@ const ExperienceSection = () => {
           <ul>
             {workExperience.map((experience, index) => (
               <li key={index}>
-                <p><strong>Company:</strong> {experience.company}</p>
-                <p><strong>Role:</strong> {experience.role}</p>
-                <p><strong>Duration:</strong> {experience.duration}</p>
-                <p><strong>Achievements:</strong> {experience.achievements}</p>
-                <button onClick={() => handleRemoveWorkExperience(index)} className="btn btn-secondary">
+                <p>
+                  <strong>Company:</strong> {experience.company}
+                </p>
+                <p>
+                  <strong>Role:</strong> {experience.role}
+                </p>
+                <p>
+                  <strong>Duration:</strong> {experience.duration}
+                </p>
+                <p>
+                  <strong>Achievements:</strong> {experience.achievements}
+                </p>
+                <button
+                  onClick={() => handleRemoveWorkExperience(index)}
+                  className="btn btn-secondary"
+                >
                   Remove
                 </button>
               </li>
