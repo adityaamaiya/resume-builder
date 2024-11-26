@@ -10,6 +10,7 @@ import { DarkModeProvider } from "../../Context/DarkModeContext";
 import ExperienceSection from "./ExperienceSection/ExperienceSection";
 import Preview1 from "./PreviewSection/Preview1";
 import Preview2 from "./PreviewSection/Preview2";
+import Footer from "../Footer/Footer";
 
 export default function Resume() {
   return (
@@ -32,6 +33,7 @@ export default function Resume() {
           <Preview2 />
         </ResumeProvider>
       </div>
+      <Footer />
     </div>
   );
 }

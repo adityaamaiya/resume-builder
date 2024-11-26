@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Footer.css";
 
 export default function Footer() {
@@ -10,9 +10,8 @@ export default function Footer() {
             <span class="text-blue">Resume</span>
             <span class="text-white"> Builder</span>
           </h2>
-          <p>
-            Copyright &copy; 2024. All rights reserved.
-          </p>
+          <p>By Aditya Amaiya</p>
+          <p>Copyright &copy; 2024. All rights reserved.</p>
         </div>
       </div>
     </footer>
