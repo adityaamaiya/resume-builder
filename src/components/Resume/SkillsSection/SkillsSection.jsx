@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useResume } from "../../../Context/ResumeContext";
+import { useDarkMode } from "../../../Context/DarkModeContext";
 
 const SkillsSection = () => {
   const { skills, setSkills } = useResume();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null); // Ref to track the dropdown
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const handleSkillChange = (e) => {
     const { value, checked } = e.target;
@@ -37,8 +39,11 @@ const SkillsSection = () => {
 
   return (
     <section style={{ marginTop: "20px", marginBottom: "20px" }}>
-      <h2>Skills</h2>
-      <p className="form-label" style={{ marginTop: "20px" }}>
+      <h2 className={`${isDarkMode ? "text-white" : "text-dark"}`}>Skills</h2>
+      <p
+        className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+        style={{ marginTop: "20px" }}
+      >
         Select Skills:{" "}
       </p>
       <div

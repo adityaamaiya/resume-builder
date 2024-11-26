@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useResume } from "../../../Context/ResumeContext";
+import { useDarkMode } from "../../../Context/DarkModeContext";
 
 const ExperienceSection = () => {
   const { workExperience, setWorkExperience } = useResume();
@@ -30,13 +31,19 @@ const ExperienceSection = () => {
     const updatedExperience = workExperience.filter((_, i) => i !== index);
     setWorkExperience(updatedExperience);
   };
-
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   return (
     <div>
-      <h3>Work Experience</h3>
+      <h2 className={`${isDarkMode ? "text-white" : "text-dark"}`}>
+        Work Experience
+      </h2>
       <div className="section">
         <div className="form-elem">
-          <label className="form-label">Company</label>
+          <label
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
+            Company
+          </label>
           <input
             type="text"
             value={company}
@@ -46,7 +53,11 @@ const ExperienceSection = () => {
           />
         </div>
         <div className="form-elem">
-          <label className="form-label">Role</label>
+          <label
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
+            Role
+          </label>
           <input
             type="text"
             value={role}
@@ -56,7 +67,11 @@ const ExperienceSection = () => {
           />
         </div>
         <div className="form-elem">
-          <label className="form-label">Duration</label>
+          <label
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
+            Duration
+          </label>
           <input
             type="text"
             value={duration}
@@ -66,7 +81,11 @@ const ExperienceSection = () => {
           />
         </div>
         <div className="form-elem">
-          <label className="form-label">Achievements</label>
+          <label
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
+            Achievements
+          </label>
           <textarea
             value={achievements}
             onChange={(e) => setAchievements(e.target.value)}
@@ -80,13 +99,13 @@ const ExperienceSection = () => {
       </button>
 
       <div style={{ marginTop: "20px" }}>
-        <h3>Work Experience Entries</h3>
+        <h3  className={`${isDarkMode ? "text-white" : "text-dark"}`}>Work Experience Entries</h3>
         {workExperience.length === 0 ? (
           <p>No work experience added yet.</p>
         ) : (
           <ul>
             {workExperience.map((experience, index) => (
-              <li key={index}>
+              <li key={index} className={`${isDarkMode ? "text-white" : "text-dark"}`}>
                 <p>
                   <strong>Company:</strong> {experience.company}
                 </p>
@@ -101,7 +120,7 @@ const ExperienceSection = () => {
                 </p>
                 <button
                   onClick={() => handleRemoveWorkExperience(index)}
-                  className="btn btn-secondary"
+                  className="btn  btn-primary"
                 >
                   Remove
                 </button>

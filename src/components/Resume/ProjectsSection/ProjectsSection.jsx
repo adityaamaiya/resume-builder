@@ -1,9 +1,9 @@
 import React from "react";
 import { useResume } from "../../../Context/ResumeContext";
-
+import { useDarkMode } from "../../../Context/DarkModeContext";
 const ProjectsSection = () => {
   const { projects, setProjects } = useResume();
-
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const handleTechnologiesChange = (index, value) => {
     const updatedProjects = [...projects];
     updatedProjects[index].technologies = value
@@ -32,13 +32,13 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <h2>Projects</h2>
+      <h2 className={`${isDarkMode ? "text-white" : "text-dark"}`}>Projects</h2>
 
       {projects.map((project, index) => (
         <>
           <section key={index} className="section">
             <div className="form-elem">
-              <label htmlFor="title" className="form-label">
+              <label htmlFor="title" className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}>
                 Title:
               </label>
 
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="form-elem">
-              <label htmlFor="description :" className="form-label">
+              <label htmlFor="description :" className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}>
                 Description
               </label>
               <textarea
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="form-elem">
-              <label htmlFor="technologies" className="form-label">
+              <label htmlFor="technologies" className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}>
                 Technologies used:
               </label>
               <input
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
           <button
             type="button"
             onClick={() => removeProject(index)}
-            className="btn btn-secondary"
+            className="btn btn-primary"
           >
             Remove
           </button>

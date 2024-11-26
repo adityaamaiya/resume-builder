@@ -10,9 +10,7 @@ import { DarkModeProvider } from "../../Context/DarkModeContext";
 export default function Home() {
   return (
     <div>
-      <DarkModeProvider>
-        <Navbar />
-      </DarkModeProvider>
+      <Navbar />
       <Header />
       <SectionOne />
       <SectionTwo />

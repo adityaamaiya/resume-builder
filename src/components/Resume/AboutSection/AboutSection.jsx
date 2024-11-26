@@ -1,6 +1,7 @@
 import React from "react";
 import { useResume } from "../../../Context/ResumeContext";
 import "../Resume.css";
+import { useDarkMode } from "../../../Context/DarkModeContext";
 
 export default function AboutSection() {
   const { personalInfo, setPersonalInfo } = useResume();
@@ -8,13 +9,19 @@ export default function AboutSection() {
   const handleChange = (e) => {
     setPersonalInfo({ ...personalInfo, [e.target.name]: e.target.value });
   };
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <>
-      <h2>AboutSection</h2>
+      <h2 className={`${isDarkMode ? "text-white" : "text-dark"}`}>
+        AboutSection
+      </h2>
       <section className="section">
-        <div className="form-elem">
-          <label htmlFor="name" className="form-label">
+        <div className={`form-elem `}>
+          <label
+            htmlFor="name"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Name:
           </label>
           <input
@@ -27,7 +34,10 @@ export default function AboutSection() {
           />
         </div>
         <div className="form-elem">
-          <label htmlFor="email" className="form-label">
+          <label
+            htmlFor="email"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Email:
           </label>
           <input
@@ -40,7 +50,10 @@ export default function AboutSection() {
           />
         </div>
         <div className="form-elem">
-          <label htmlFor="phone" className="form-label">
+          <label
+            htmlFor="phone"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Phone:
           </label>
           <input
@@ -54,7 +67,10 @@ export default function AboutSection() {
         </div>
 
         <div className="form-elem">
-          <label htmlFor="linkedIn" className="form-label">
+          <label
+            htmlFor="linkedIn"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             LinkedIn:
           </label>
           <input
@@ -67,7 +83,10 @@ export default function AboutSection() {
           />
         </div>
         <div className="form-elem">
-          <label htmlFor="github" className="form-label">
+          <label
+            htmlFor="github"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             GitHub:
           </label>
           <input

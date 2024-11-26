@@ -1,17 +1,24 @@
 import React from "react";
 import { useResume } from "../../../Context/ResumeContext";
+import { useDarkMode } from "../../../Context/DarkModeContext";
 export default function EducationSection() {
   const { education, setEducation } = useResume();
 
   const handleChange = (e) => {
     setEducation({ ...education, [e.target.name]: e.target.value });
   };
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   return (
     <>
-      <h2>EducationSection</h2>
+      <h2 className={`${isDarkMode ? "text-white" : "text-dark"}`}>
+        EducationSection
+      </h2>
       <section className="section">
         <div className="form-elem">
-          <label htmlFor="institution" className="form-label">
+          <label
+            htmlFor="institution"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Institution:
           </label>
           <input
@@ -24,7 +31,10 @@ export default function EducationSection() {
           />
         </div>
         <div className="form-elem">
-          <label htmlFor="degree" className="form-label">
+          <label
+            htmlFor="degree"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Degree:
           </label>
           <input
@@ -37,7 +47,10 @@ export default function EducationSection() {
           />
         </div>
         <div className="form-elem">
-          <label htmlFor="yearOfPassing" className="form-label">
+          <label
+            htmlFor="yearOfPassing"
+            className={`form-label ${isDarkMode ? "text-white" : "text-dark"}`}
+          >
             Year of Passing:
           </label>
           <input
